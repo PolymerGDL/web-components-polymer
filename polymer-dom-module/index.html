@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+  <title>DOM Module</title>
+</head>
+<body>
+  <awesome-component></awesome-component>
+  <dom-module id="awesome-component">
+      <template>
+        <div>{{message}}</div>
+      </template>
+  
+      <script>
+        class AwesomeComponent extends Polymer.Element {
+  
+          static get is() { return 'awesome-component'; }
+
+          static get properties() {
+            return {
+              message: {
+                type: String,
+                value: "I turned myself into a polymer component, i'm polymer rick"
+              }
+            }
+          }
+  
+          displayMessage() {
+            console.log(this.message);
+          }
+  
+        }
+
+        customElements.define(AwesomeComponent.is, AwesomeComponent);
+      </script>
+  
+    </dom-module>
+  
+  
+  
+</body>
+</html>
