@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="import"  href="https://polygit.org/components/polymer/polymer-element.html">
+    <title>Hello-Polymer</title>
+  </head>
+  <body>
+    <awesome-component></awesome-component>
+    <script>
+      class AwesomeComponent extends Polymer.Element {
+        static get is() { return "awesome-component"; }
+        constructor() {
+            super();
+            this.textContent = "Luke, i'm your father";
+          }
+      }
+      // Register the new element with the browser
+      customElements.define(AwesomeComponent.is, AwesomeComponent);
+    </script>
+  </body>
+</html>
